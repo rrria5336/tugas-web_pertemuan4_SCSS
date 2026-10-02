@@ -1,0 +1,11 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.footer {
+  grid-area: footer;
+  background: $warna-kartu;
+  padding: $jarak-sm + 2 $jarak-lg;
+  text-align: center;
+  border-radius: $sudut;
+  box-shadow: $bayangan;
+}

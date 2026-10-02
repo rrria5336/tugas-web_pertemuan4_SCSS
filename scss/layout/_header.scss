@@ -1,0 +1,45 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.header {
+  grid-area: header;
+  background: linear-gradient(135deg, $warna-kedua, $warna-utama);
+  color: white;
+  padding: $jarak-lg $jarak-xl;
+  border-radius: $sudut;
+  display: flex;
+  align-items: center;
+  gap: $jarak;
+  flex-wrap: wrap;
+  
+  .foto-profil {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+  }
+  
+  .judul-header {
+    flex: 1;
+    
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: $jarak-sm;
+    }
+    
+    p {
+      margin-bottom: 5px;
+      opacity: 0.9;
+    }
+  }
+  
+  @include respond-to(mobile) {
+    flex-direction: column;
+    text-align: center;
+    
+    .judul-header {
+      flex: auto;
+    }
+  }
+}

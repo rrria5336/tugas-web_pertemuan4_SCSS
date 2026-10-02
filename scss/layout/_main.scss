@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.main {
+  grid-area: main;
+  background: $warna-kartu;
+  padding: $jarak-xl;
+  border-radius: $sudut;
+  box-shadow: $bayangan;
+  
+  section {
+    margin-bottom: $jarak-lg;
+  }
+  
+  hr {
+    margin: $jarak-lg 0;
+    border: none;
+    border-top: 2px solid $warna-bg;
+  }
+  
+  #kontak {
+    a {
+      @include link-hover($warna-aksen);
+    }
+  }
+}

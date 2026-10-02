@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+// Mixin 1: Flexbox Center
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+}
+
+// Mixin 2: Card Style
+@mixin card-style($bg: $warna-kartu, $shadow: $bayangan) {
+  background: $bg;
+  border-radius: $sudut;
+  box-shadow: $shadow;
+  padding: $jarak-lg;
+}
+
+// Mixin 3: Responsive Breakpoint
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $mobile) {
+      @content;
+    }
+  }
+}
+
+// Mixin 4: Link Hover Effect
+@mixin link-hover($hover-color: $warna-aksen) {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: $hover-color;
+    text-decoration: underline;
+  }
+}

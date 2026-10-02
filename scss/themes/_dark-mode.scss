@@ -1,0 +1,49 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: $dark-bg;
+    color: $dark-teks;
+  }
+  
+  .header {
+    background: linear-gradient(135deg, $dark-kedua, $dark-utama);
+  }
+  
+  .main {
+    background: $dark-kartu;
+    box-shadow: $dark-bayangan;
+    
+    h2 {
+      color: $dark-utama;
+      border-bottom-color: $dark-kedua;
+    }
+    
+    h3 {
+      color: $dark-kedua;
+    }
+  }
+  
+  .footer {
+    background: $dark-kartu;
+    box-shadow: $dark-bayangan;
+  }
+  
+  $dark-links: (
+    'kontak': $dark-kedua,
+    'nav': white
+  );
+  
+  @each $section, $color in $dark-links {
+    @if $section == 'kontak' {
+      #kontak a {
+        color: $color;
+        
+        &:hover {
+          color: $dark-aksen;
+        }
+      }
+    }
+  }
+}

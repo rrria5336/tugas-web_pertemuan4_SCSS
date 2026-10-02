@@ -1,0 +1,29 @@
+// ============================================
+// MAIN SCSS FILE - PORTFOLIO SRI SUPRIANA
+// ============================================
+
+// ABSTRACTS
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+// BASE
+@use 'base/reset';
+@use 'base/typography';
+
+// COMPONENTS
+@use 'components/navigation';
+
+// LAYOUT
+@use 'layout/header';
+@use 'layout/main';
+@use 'layout/footer';
+
+
+// PAGES
+   // @use 'pages/portfolio';
+
+// THEMES
+@use 'themes/dark-mode';
+
+// VENDORS
+@use 'vendors/normalize';
